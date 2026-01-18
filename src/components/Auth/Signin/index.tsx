@@ -16,7 +16,7 @@ export default function Signin() {
 
     // Login-Logik (Hier kannst du später deine API anbinden)
     if (data.email === "admin@example.com" && data.password === "admin123") {
-      document.cookie = "token=true; path=/; max-age=86400"; // Wichtig für Middleware
+      document.cookie = "token=true; path=/; max-age=86400; SameSite=Lax"; // Wichtig für Middleware
       router.push("/");
       router.refresh();
     } else {
